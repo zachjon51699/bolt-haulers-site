@@ -10,17 +10,10 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // e.preventDefault(); // ❌ Removed for Netlify Forms to work
-    // Reset form (optional)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
-  };
+ const handleSubmit = (e: React.FormEvent) => {
+  // e.preventDefault(); // ❌ Removed this line so Netlify can submit the form
+  alert('Thank you for your message! We\'ll get back to you soon.');
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
