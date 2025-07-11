@@ -11,10 +11,8 @@ const Contact = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
+    // e.preventDefault(); // ❌ Removed for Netlify Forms to work
+    // Reset form (optional)
     setFormData({
       name: '',
       email: '',
@@ -22,7 +20,6 @@ const Contact = () => {
       service: '',
       message: ''
     });
-    alert('Thank you for your message! We\'ll get back to you soon.');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -42,7 +39,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6 text-blue-700" />,
       title: 'Email',
-      details: 'info@bolthaulers.com',
+      details: 'bookings@bolthaulers.com',
       subDetails: 'We respond within 24 hours'
     },
     {
@@ -77,8 +74,18 @@ const Contact = () => {
               <MessageCircle className="h-6 w-6 text-blue-700" />
               <h3 className="text-2xl font-bold text-gray-900">Send Us a Message</h3>
             </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              className="space-y-6"
+            >
+              {/* Netlify hidden fields */}
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
