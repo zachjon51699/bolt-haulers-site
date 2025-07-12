@@ -5,13 +5,13 @@ const About = () => {
   const stats = [
     {
       icon: <Users className="h-8 w-8 text-blue-700" />,
-      number: '500+',
-      label: 'Happy Customers'
+      number: 'Trusted',
+      label: 'by Locals'
     },
     {
       icon: <Award className="h-8 w-8 text-blue-700" />,
-      number: '5+',
-      label: 'Years Experience'
+      number: 'Fast',
+      label: 'Reliable Service'
     },
     {
       icon: <MapPin className="h-8 w-8 text-blue-700" />,
