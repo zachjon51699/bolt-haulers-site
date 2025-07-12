@@ -37,7 +37,7 @@ const Header = () => {
           {/* Phone Number */}
           <div className="hidden md:flex items-center space-x-2 text-blue-700">
             <Phone className="h-5 w-5" />
-            <span className="font-semibold text-lg">(225) 555-MOVE</span>
+            <span className="font-semibold text-lg">(225) 454-5977</span>
           </div>
 
           {/* Mobile Menu Button */}
