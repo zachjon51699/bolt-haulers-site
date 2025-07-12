@@ -7,7 +7,7 @@ const Services = () => {
       icon: <Home className="h-12 w-12 text-blue-700" />,
       title: 'Moving Services',
       description: 'Professional local moving for dorms, apartments, and homes. Experienced movers with proper equipment.',
-      features: ['Local & Long Distance', 'Packing Services', 'Furniture Assembly', 'Storage Solutions']
+      features: ['Local Moves', 'Packing Services', 'Furniture Assembly', 'Storage Solutions']
     },
     {
       icon: <Trash2 className="h-12 w-12 text-orange-600" />,
