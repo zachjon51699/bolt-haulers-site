@@ -17,25 +17,14 @@ const Pricing = () => {
       addOn: 'Add $40/hour per extra mover'
     },
     {
-      title: 'Dorm Storage',
-      price: '$199',
-      period: 'flat rate',
-      description: 'Dorm to nearby storage facility',
-      features: [
-        'Perfect for students',
-        'Includes transportation',
-        'Quick turnaround',
-        'Secure storage'
-      ],
-      popular: false
-    },
-    {
       title: 'Apartment Move',
-      price: '$249-$349',
+      price: '$249–$449',
       period: 'flat rate',
       description: 'Apartment to apartment (within 10 miles)',
       features: [
-        'Complete apartment moves',
+        'Studio: $249',
+        '1-Bedroom: $349',
+        '2-Bedroom: $449',
         'Up to 10 miles',
         'Professional service',
         'Transparent pricing'
@@ -67,22 +56,31 @@ const Pricing = () => {
 
   const storagePricing = [
     {
-      title: 'Small Item',
+      title: 'Small Items',
       price: '$9',
-      description: 'Per item monthly',
-      features: ['Fans', 'Chairs', 'Brooms', 'Twin Headboards', 'Umbrellas']
+      description: 'Per item per month',
+      features: [
+        'Examples:',
+        'Desk Fan, Folding Chair, Laundry Basket, Pillow, Mirror, Umbrella'
+      ]
     },
     {
-      title: 'Medium Item',
+      title: 'Medium Items',
       price: '$18',
-      description: 'Per item monthly (22x18x18 box or similar)',
-      features: ['Microwaves', 'Suitcases', 'Storage Bins', 'Guitar', 'Nightstand']
+      description: 'Per item per month (up to 22"x18"x18" box)',
+      features: [
+        'Examples:',
+        'Suitcase, Duffle Bag, Storage Bin < 4 cu ft, Microwave, Printer'
+      ]
     },
     {
-      title: 'Large Item',
+      title: 'Large Items',
       price: '$32',
-      description: 'Per item monthly',
-      features: ['Mini Fridge', 'Trunks', 'Large Suitcases', 'Camp Duffel Bags', 'Television Stand']
+      description: 'Per item per month',
+      features: [
+        'Examples:',
+        'Mini Fridge, Desk Chair, Trunk, Rug, Large Bin > 4 cu ft'
+      ]
     }
   ];
 
@@ -100,7 +98,7 @@ const Pricing = () => {
         {/* Moving Services Pricing */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Moving Services</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {movingPricing.map((plan, index) => (
               <div key={index} className={`rounded-xl p-8 ${plan.popular ? 'bg-blue-700 text-white ring-4 ring-blue-200' : 'bg-white'} shadow-lg hover:shadow-xl transition-all duration-300`}>
                 {plan.popular && (
@@ -164,7 +162,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* Student Storage Pricing */}
+        {/* Summer Storage Pricing */}
         <div>
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Summer Storage for Students</h3>
           <div className="grid md:grid-cols-3 gap-8">
