@@ -26,7 +26,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-blue-700" />,
       title: 'Phone',
-      details: '(225) 555-MOVE',
+      details: '(225) 454-5977',
       subDetails: 'Call or text anytime'
     },
     {
@@ -200,10 +200,10 @@ const Contact = () => {
                 Call us now for same-day service availability and emergency moves.
               </p>
               <a
-                href="tel:225-555-MOVE"
+                href="tel:225-454-5977"
                 className="inline-block bg-white text-blue-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200"
               >
-                Call (225) 555-MOVE
+                Call (225) 454-5977
               </a>
             </div>
           </div>
