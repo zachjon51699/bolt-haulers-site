@@ -47,11 +47,11 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(225) 555-MOVE</span>
+                <span>(225) 454-5977</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@bolthaulers.com</span>
+                <span>bookings@bolthaulers.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
