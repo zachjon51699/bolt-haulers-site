@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Truck className="h-8 w-8 text-blue-400" />
+              <img src="/logo-icon.png" alt="Bolt Haulers Logo" className="h-8 w-8" />
               <span className="text-2xl font-bold">Bolt Haulers</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
