@@ -46,12 +46,6 @@ const Pricing = () => {
 
   const junkRemovalPricing = [
     {
-      title: 'Single Item',
-      price: '$75',
-      description: 'One item pickup and disposal',
-      features: ['Quick service', 'Eco-friendly disposal', 'No hidden fees']
-    },
-    {
       title: 'Small Load',
       price: '$125',
       description: '¼ trailer load',
@@ -68,6 +62,27 @@ const Pricing = () => {
       price: '$375',
       description: 'Full 6-yard trailer load',
       features: ['Estate cleanouts', 'Large projects', 'Complete removal']
+    }
+  ];
+
+  const storagePricing = [
+    {
+      title: 'Small Item',
+      price: '$9',
+      description: 'Per item monthly',
+      features: ['Fans', 'Chairs', 'Brooms', 'Twin Headboards', 'Umbrellas']
+    },
+    {
+      title: 'Medium Item',
+      price: '$18',
+      description: 'Per item monthly (22x18x18 box or similar)',
+      features: ['Microwaves', 'Suitcases', 'Storage Bins', 'Guitar', 'Nightstand']
+    },
+    {
+      title: 'Large Item',
+      price: '$32',
+      description: 'Per item monthly',
+      features: ['Mini Fridge', 'Trunks', 'Large Suitcases', 'Camp Duffel Bags', 'Television Stand']
     }
   ];
 
@@ -123,7 +138,7 @@ const Pricing = () => {
         {/* Junk Removal Pricing */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Junk Removal</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {junkRemovalPricing.map((plan, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-4">
@@ -153,59 +168,23 @@ const Pricing = () => {
         <div>
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Summer Storage for Students</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Small Item */}
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Small Items</h4>
-                <div className="text-4xl font-bold text-gray-900">$9</div>
-                <p className="text-gray-600 mt-2">Per item per month</p>
+            {storagePricing.map((plan, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{plan.title}</h4>
+                  <div className="text-4xl font-bold text-gray-900">{plan.price}</div>
+                  <p className="text-gray-600 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-3">
-                <li>Fans</li>
-                <li>Folding Chairs</li>
-                <li>Small Lamps</li>
-                <li>Mirrors</li>
-                <li>Backpacks or Crates</li>
-              </ul>
-            </div>
-
-            {/* Medium Item */}
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Medium Items</h4>
-                <div className="text-4xl font-bold text-gray-900">$18</div>
-                <p className="text-gray-600 mt-2">Per item per month</p>
-              </div>
-              <ul className="space-y-3">
-                <li>Storage Box (22"x18"x18")</li>
-                <li>Duffle Bags or Suitcases</li>
-                <li>Small Shelves</li>
-                <li>Microwaves</li>
-                <li>Plastic Bins</li>
-              </ul>
-            </div>
-
-            {/* Large Item */}
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Large Items</h4>
-                <div className="text-4xl font-bold text-gray-900">$32</div>
-                <p className="text-gray-600 mt-2">Per item per month</p>
-              </div>
-              <ul className="space-y-3">
-                <li>Mini Fridges</li>
-                <li>TVs and Monitors</li>
-                <li>Large Bins or Trunks</li>
-                <li>Chairs or Nightstands</li>
-                <li>Desks or File Cabinets</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-6">
-            <p className="text-gray-600 font-medium">
-              Need boxes? We’ll provide them for <span className="font-semibold">$5 each</span> — just let us know!
-            </p>
+            ))}
           </div>
         </div>
       </div>
