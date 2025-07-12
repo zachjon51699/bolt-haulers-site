@@ -46,28 +46,28 @@ const Pricing = () => {
 
   const junkRemovalPricing = [
     {
-      title: 'Single Item',
-      price: '$75',
-      description: 'One item pickup and disposal',
-      features: ['Quick service', 'Eco-friendly disposal', 'No hidden fees']
+      title: 'Minimum Pickup',
+      price: '$125+',
+      description: 'Small single-item or minimum load',
+      features: ['Trailer rental included', 'Basic disposal', 'Dump fees extra']
     },
     {
-      title: 'Small Load',
-      price: '$125',
-      description: '¼ truck load',
-      features: ['Perfect for cleanouts', 'Same-day service', 'Professional crew']
+      title: 'Half Trailer Load',
+      price: '$225+',
+      description: 'Roughly 3 yards of debris',
+      features: ['Includes most home cleanouts', 'Efficient service', 'Dump fees extra']
     },
     {
-      title: 'Medium Load',
-      price: '$250',
-      description: '½ truck load',
-      features: ['Home renovations', 'Office cleanouts', 'Furniture removal']
+      title: 'Full Trailer Load',
+      price: '$325+',
+      description: 'Up to 6 yards of material',
+      features: ['Max fill for trailer', 'Ideal for large cleanups', 'Dump fees extra']
     },
     {
-      title: 'Full Truck',
-      price: '$450',
-      description: 'Full truck load',
-      features: ['Estate cleanouts', 'Large projects', 'Complete removal']
+      title: 'Heavy Material Load',
+      price: '$375+',
+      description: 'Concrete, bricks, or dense debris',
+      features: ['Weight-based pricing', 'Requires landfill drop', 'Dump fees extra']
     }
   ];
 
@@ -165,7 +165,7 @@ const Pricing = () => {
           </div>
           <div className="text-center mt-6">
             <p className="text-gray-600">
-              <span className="font-semibold">Note:</span> Add $40 for TVs or mattresses due to disposal fees
+              <span className="font-semibold">Note:</span> Landfill dump fees are passed directly to the customer and added to your invoice.
             </p>
           </div>
         </div>
