@@ -17,21 +17,20 @@ const Pricing = () => {
       addOn: 'Add $40/hour per extra mover'
     },
     {
-      title: 'Dorm Storage',
+      title: 'Dorm Storage Move',
       price: '$199',
       period: 'flat rate',
-      description: 'Dorm to nearby storage facility',
+      description: 'Pickup & drop-off from LSU dorms',
       features: [
         'Perfect for students',
         'Includes transportation',
         'Quick turnaround',
-        'Secure storage'
-      ],
-      popular: false
+        'Secure storage drop-off'
+      ]
     },
     {
       title: 'Apartment Move',
-      price: '$249-$349',
+      price: '$249–$349',
       period: 'flat rate',
       description: 'Apartment to apartment (within 10 miles)',
       features: [
@@ -46,49 +45,28 @@ const Pricing = () => {
 
   const junkRemovalPricing = [
     {
-      title: 'Minimum Pickup',
-      price: '$125+',
-      description: 'Small single-item or minimum load',
-      features: ['Trailer rental included', 'Basic disposal', 'Dump fees extra']
+      title: 'Single Item',
+      price: '$75',
+      description: 'One item pickup and disposal',
+      features: ['Quick service', 'Eco-friendly disposal', 'No hidden fees']
     },
     {
-      title: 'Half Trailer Load',
-      price: '$225+',
-      description: 'Roughly 3 yards of debris',
-      features: ['Includes most home cleanouts', 'Efficient service', 'Dump fees extra']
+      title: 'Small Load',
+      price: '$150',
+      description: '1–2 yards of junk',
+      features: ['Perfect for small cleanouts', 'Same-day service', 'Professional crew']
     },
     {
-      title: 'Full Trailer Load',
-      price: '$325+',
-      description: 'Up to 6 yards of material',
-      features: ['Max fill for trailer', 'Ideal for large cleanups', 'Dump fees extra']
+      title: 'Medium Load',
+      price: '$250',
+      description: '3–4 yards of junk',
+      features: ['Home renovations', 'Office cleanouts', 'Furniture removal']
     },
     {
-      title: 'Heavy Material Load',
-      price: '$375+',
-      description: 'Concrete, bricks, or dense debris',
-      features: ['Weight-based pricing', 'Requires landfill drop', 'Dump fees extra']
-    }
-  ];
-
-  const storagePricing = [
-    {
-      title: 'Basic Storage',
-      price: '$99',
-      description: '3 standard boxes for 3 months',
-      features: ['LSU area pickup', 'Secure storage', 'Delivery included']
-    },
-    {
-      title: 'Standard Storage',
-      price: '$149',
-      description: '5 items for 3 months',
-      features: ['Mixed items', 'Pickup & delivery', 'Summer storage']
-    },
-    {
-      title: 'Premium Storage',
-      price: '$199',
-      description: '8+ items for 3 months',
-      features: ['Large capacity', 'Full service', 'Flexible scheduling']
+      title: 'Full Trailer',
+      price: '$350',
+      description: 'Up to 6 yards (max capacity)',
+      features: ['Estate cleanouts', 'Large projects', 'Dump fee included up to 1 ton']
     }
   ];
 
@@ -123,8 +101,8 @@ const Pricing = () => {
                   <p className={`mt-2 ${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-3">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start space-x-3">
                       <Check className={`h-5 w-5 flex-shrink-0 mt-0.5 ${plan.popular ? 'text-blue-200' : 'text-green-600'}`} />
                       <span className={`${plan.popular ? 'text-blue-100' : 'text-gray-700'}`}>{feature}</span>
                     </li>
@@ -153,8 +131,8 @@ const Pricing = () => {
                   <p className="text-sm text-gray-600 mt-1">{plan.description}</p>
                 </div>
                 <ul className="space-y-2">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-2">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start space-x-2">
                       <Check className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
@@ -165,37 +143,32 @@ const Pricing = () => {
           </div>
           <div className="text-center mt-6">
             <p className="text-gray-600">
-              <span className="font-semibold">Note:</span> Landfill dump fees are passed directly to the customer and added to your invoice.
+              <span className="font-semibold">Note:</span> Dump fees passed to customer beyond 1 ton. TVs/mattresses: +$40
             </p>
           </div>
         </div>
 
         {/* Student Storage Pricing */}
         <div>
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Summer Storage for Students</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {storagePricing.map((plan, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{plan.title}</h4>
-                  <div className="text-4xl font-bold text-gray-900">{plan.price}</div>
-                  <p className="text-gray-600 mt-2">{plan.description}</p>
-                </div>
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <p className="text-gray-600">
-              <span className="font-semibold">Add-on:</span> $10/month per extra item
-            </p>
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Student Summer Storage</h3>
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 max-w-xl mx-auto text-center">
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Simple Per-Box Pricing</h4>
+            <div className="text-4xl font-bold text-gray-900 mb-2">$15</div>
+            <p className="text-gray-600 mb-4">per box/month — no hidden fees</p>
+            <ul className="space-y-3 text-left max-w-sm mx-auto">
+              <li className="flex items-start space-x-2">
+                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>LSU dorm pickup & drop-off included</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>Secure local storage facility</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>No minimums or complicated tiers</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
