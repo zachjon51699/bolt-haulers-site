@@ -45,7 +45,7 @@ const Hero = () => {
                 href="tel:225-555-MOVE"
                 className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Call (225) 555-MOVE
+                Call (225) 454-5977
               </a>
             </div>
           </div>
