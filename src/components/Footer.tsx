@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo-icon.png" alt="Bolt Haulers Logo" className="h-8 w-8" />
+              <img src="/logo-icon.png" alt="Bolt Haulers Logo" className="h-12 w-12" />
               <span className="text-2xl font-bold">Bolt Haulers</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
