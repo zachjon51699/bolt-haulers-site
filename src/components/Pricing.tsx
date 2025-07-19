@@ -18,7 +18,7 @@ const Pricing = () => {
     },
     {
       title: 'Dorm Move',
-      price: '$149-$199',
+      price: '$300 - $350',
       period: 'flat rate',
       description: 'Dorm to dorm or dorm to local address',
       features: [
@@ -30,7 +30,7 @@ const Pricing = () => {
     },
     {
       title: 'Apartment Move',
-      price: '$249-$349',
+      price: '$400 - $500',
       period: 'flat rate',
       description: 'Apartment to apartment (within 10 miles)',
       features: [
