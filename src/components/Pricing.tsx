@@ -66,33 +66,25 @@ const Pricing = () => {
 
   const storagePricing = [
     {
-      title: 'Small Items',
-      price: '$9',
-      description: 'Per item monthly',
+      title: 'Pay Per Package',
+      price: '$30',
+      description: 'Per package (up to 50 lbs) for 2 weeks of storage',
       features: [
-        'Desk Fan, Headboard, Shoe Rack',
-        'Folding Chair, Poster Tube, Pillow',
-        'Broom, Ironing Board, Umbrella'
+        'Secure storage for standard packages',
+        'Perfect for small to medium items',
+        'Add $50 for oversized/heavy items (TVs, mini-fridges, furniture)',
+        'Delivery fee: $100 on move-in day'
       ]
     },
     {
-      title: 'Medium Items',
-      price: '$18',
-      description: 'Per item monthly',
+      title: 'VIP Student Move-In',
+      price: '$400',
+      description: 'All-inclusive package for a stress-free move-in',
       features: [
-        'Storage Box (22x18x18), Microwave, Duffle Bag',
-        'Plastic Bin < 4 cu ft, Nightstand',
-        'Suitcase, Printer, End Table'
-      ]
-    },
-    {
-      title: 'Large Items',
-      price: '$32',
-      description: 'Per item monthly',
-      features: [
-        'Mini Fridge, Large Plastic Bin > 4 cu ft',
-        'Television Stand, Golf Bag, Trunk',
-        'Camp Duffle, Chest, Large Suitcase'
+        'Up to 8 standard packages (50 lbs each)',
+        'Includes 1–2 oversized/heavy items',
+        'White-glove delivery & setup (up to 1 hour)',
+        'Priority scheduling for move-in day'
       ]
     }
   ];
@@ -177,8 +169,8 @@ const Pricing = () => {
 
         {/* Student Storage Pricing */}
         <div>
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Summer Storage for Students</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Student Storage & Move-In Packages</h3>
+          <div className="grid md:grid-cols-2 gap-8">
             {storagePricing.map((plan, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-6">
@@ -196,11 +188,6 @@ const Pricing = () => {
                 </ul>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-6">
-            <p className="text-gray-600">
-              <span className="font-semibold">Shipping Option:</span> $50 per box + FedEx shipping.
-            </p>
           </div>
         </div>
       </div>
