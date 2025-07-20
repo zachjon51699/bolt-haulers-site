@@ -66,24 +66,24 @@ const Pricing = () => {
 
   const storagePricing = [
     {
-      title: 'Pay Per Package',
+      title: 'Storage Only',
       price: '$30',
-      description: 'Per package (up to 50 lbs) for 2 weeks of storage',
+      description: 'Per package (up to 50 lbs) – 2 weeks of storage',
       features: [
         'Secure storage for standard packages',
-        'Perfect for small to medium items',
-        'Add $50 for oversized/heavy items (TVs, mini-fridges, furniture)',
-        'Delivery fee: $100 on move-in day'
+        'Add $50 for oversized/heavy items (mini-fridges, TVs, etc.)',
+        'Optional delivery: $100 flat on move-in day',
+        'Perfect for flexible storage needs'
       ]
     },
     {
-      title: 'VIP Student Move-In',
+      title: 'VIP Move-In Package',
       price: '$400',
-      description: 'All-inclusive package for a stress-free move-in',
+      description: 'All-inclusive, stress-free move-in service',
       features: [
-        'Up to 8 standard packages (50 lbs each)',
+        'Up to 8 packages (50 lbs each)',
         'Includes 1–2 oversized/heavy items',
-        'White-glove delivery & setup (up to 1 hour)',
+        'Full-service delivery and in-dorm placement',
         'Priority scheduling for move-in day'
       ]
     }
@@ -169,7 +169,7 @@ const Pricing = () => {
 
         {/* Student Storage Pricing */}
         <div>
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Student Storage & Move-In Packages</h3>
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Student Move-In & Storage Packages</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {storagePricing.map((plan, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
