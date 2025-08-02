@@ -5,8 +5,8 @@ const Pricing = () => {
   const movingPricing = [
     {
       title: 'Hourly Rate',
-      price: 'Starting at $250',
-      period: '',
+      price: '$99',
+      period: '/hr',
       description: 'Includes 2 movers + truck (1-hour minimum)',
       features: [
         'Professional movers',
@@ -30,9 +30,9 @@ const Pricing = () => {
     },
     {
       title: 'Apartment Move',
-      price: 'Starting at $250',
+      price: '$400',
       period: '',
-      description: 'Apartment-to-apartment moves within 10 miles',
+      description: 'Flat rate for apartment-to-apartment moves within 10 miles',
       features: [
         'Complete apartment moves',
         'Up to 10 miles',
@@ -119,7 +119,10 @@ const Pricing = () => {
                 )}
                 <div className="text-center mb-6">
                   <h4 className={`text-xl font-semibold mb-2 ${plan.popular ? 'text-white' : 'text-gray-900'}`}>{plan.title}</h4>
-                  <div className="text-3xl font-bold">{plan.price}</div>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-lg ml-1 text-gray-500">{plan.period}</span>
+                  </div>
                   <p className={`mt-2 ${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-6">
