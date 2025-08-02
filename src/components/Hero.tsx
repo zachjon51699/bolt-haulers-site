@@ -14,16 +14,16 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-gray-600 mt-6 leading-relaxed">
               Trusted local movers serving Baton Rouge, LSU students, and surrounding areas. 
-              Fast, reliable, and affordable moving services with transparent pricing.
+              Fast, reliable, and affordable moving and junk removal with transparent pricing.
             </p>
             
             {/* Benefits */}
             <div className="mt-8 space-y-3">
               {[
-                'Licensed & Insured',
-                'Transparent Pricing',
+                'Fully Insured • Transparent Pricing',
                 'LSU Student Specialists',
-                'Same-Day Service Available'
+                'Same-Day Service Available',
+                'Locally Owned & Operated'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
@@ -42,7 +42,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </a>
               <a
-                href="tel:225-555-MOVE"
+                href="tel:225-454-5977"
                 className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Call (225) 454-5977

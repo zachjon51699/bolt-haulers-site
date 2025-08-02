@@ -5,9 +5,9 @@ const Pricing = () => {
   const movingPricing = [
     {
       title: 'Hourly Rate',
-      price: '$99',
-      period: '/hour',
-      description: '2 movers + 1 truck (1-hour minimum)',
+      price: 'Starting at $250',
+      period: '',
+      description: 'Includes 2 movers + truck (1-hour minimum)',
       features: [
         'Professional movers',
         'Moving truck included',
@@ -18,21 +18,21 @@ const Pricing = () => {
     },
     {
       title: 'Dorm Move',
-      price: '$300 - $350',
-      period: 'flat rate',
-      description: 'Dorm to dorm or dorm to local address',
+      price: 'Starting at $250',
+      period: '',
+      description: 'Ideal for LSU students — dorm to dorm or local address',
       features: [
-        'Perfect for students',
         'Quick turnaround',
+        'Flat-rate pricing available',
         'Local only',
         'No hidden fees'
       ]
     },
     {
       title: 'Apartment Move',
-      price: '$400 - $500',
-      period: 'flat rate',
-      description: 'Apartment to apartment (within 10 miles)',
+      price: 'Starting at $250',
+      period: '',
+      description: 'Apartment-to-apartment moves within 10 miles',
       features: [
         'Complete apartment moves',
         'Up to 10 miles',
@@ -45,20 +45,26 @@ const Pricing = () => {
 
   const junkRemovalPricing = [
     {
+      title: 'Single Item',
+      price: '$75',
+      description: 'One item pickup (e.g., appliance, mattress)',
+      features: ['Quick pickups', 'Same-day availability', 'Affordable flat rate']
+    },
+    {
       title: 'Small Load',
       price: '$125',
-      description: '¼ trailer load',
+      description: '¼ trailer load (approx. 1–2 yards)',
       features: ['Perfect for cleanouts', 'Same-day service', 'Professional crew']
     },
     {
       title: 'Medium Load',
       price: '$250',
-      description: '½ trailer load',
+      description: '½ trailer load (approx. 3–4 yards)',
       features: ['Home renovations', 'Office cleanouts', 'Furniture removal']
     },
     {
       title: 'Full Trailer',
-      price: '$375',
+      price: '$450',
       description: 'Full 6-yard trailer load',
       features: ['Estate cleanouts', 'Large projects', 'Complete removal']
     }
@@ -113,10 +119,7 @@ const Pricing = () => {
                 )}
                 <div className="text-center mb-6">
                   <h4 className={`text-xl font-semibold mb-2 ${plan.popular ? 'text-white' : 'text-gray-900'}`}>{plan.title}</h4>
-                  <div className="flex items-baseline justify-center">
-                    <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-gray-900'}`}>{plan.price}</span>
-                    <span className={`text-lg ml-1 ${plan.popular ? 'text-blue-100' : 'text-gray-500'}`}>{plan.period}</span>
-                  </div>
+                  <div className="text-3xl font-bold">{plan.price}</div>
                   <p className={`mt-2 ${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-6">
@@ -141,7 +144,7 @@ const Pricing = () => {
         {/* Junk Removal Pricing */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Junk Removal</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {junkRemovalPricing.map((plan, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-4">
@@ -162,7 +165,7 @@ const Pricing = () => {
           </div>
           <div className="text-center mt-6">
             <p className="text-gray-600">
-              <span className="font-semibold">Note:</span> $125 minimum per pickup. Add $40 for TVs or mattresses due to disposal fees.
+              <span className="font-semibold">Note:</span> Dumping fees passed through at cost (typically $32–$35/ton). Minimum $75 per pickup.
             </p>
           </div>
         </div>

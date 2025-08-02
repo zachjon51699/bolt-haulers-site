@@ -36,7 +36,7 @@ const About = () => {
               Born and raised in Baton Rouge, we understand the unique needs of our community. From helping LSU students with dorm moves to assisting families with relocations, we've been the trusted choice for reliable moving services.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our team is fully licensed, insured, and committed to providing exceptional service. We take pride in our work and treat your belongings with the same care we'd give our own.
+              Our team is fully insured and committed to providing exceptional service. We take pride in our work and treat your belongings with the same care we'd give our own.
             </p>
             
             {/* Stats */}
